@@ -4,8 +4,8 @@
 
 def uppercase(str):
     for char in str:
+        asci = ord(char)
         if char.islower():
-            print(chr(ord(char) - 32), end="")
-        else:
-            print(chr(ord(char)), end="")
+            asci = asci - 32
+        print("{:c}".format(asci), end="")
     print("")
