@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Print any posible combination without reapeting same digits from before
+# Print any posible combination without reapeting same digits from before
 for number in range(0, 9 + 1):
     for number2 in range(0, 9 + 1):
         if number < number2:
