@@ -2,7 +2,9 @@
 
 
 def remove_char_at(str, n):
-    first = str[:n] 
-    last = str[n + 1:]
-
-    return first + last
+    if n >= 0:
+        first = str[:n]
+        last = str[n + 1:]
+        return first + last
+    else:
+        return str
