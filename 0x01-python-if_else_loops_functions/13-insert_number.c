@@ -70,7 +70,6 @@ listint_t *insert_node(listint_t **head, int number)
 		temp = temp->next;
 	}
 
-	new_node->next = temp->next;
 	temp->next = new_node;
 
 	return (new_node);
