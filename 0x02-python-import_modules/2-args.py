@@ -8,8 +8,8 @@ if __name__ == "__main__":
     input_usr = argv[1:]
     input_size = len(input_usr)
 
-    print("{:d} {:s}{:s}".format(input_size, "arguments" if input_size is not 1
-                                 else "argument", "." if input_size is 0
+    print("{:d} {:s}{:s}".format(input_size, "arguments" if input_size != 1
+                                 else "argument", "." if input_size == 0
                                  else ":"))
 
     for index_args, args in enumerate(input_usr):
