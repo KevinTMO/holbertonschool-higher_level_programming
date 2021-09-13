@@ -9,8 +9,8 @@ if __name__ == "__main__":
     input_size = len(input_usr)
 
     print("{:d} {:s}{:s}".format(input_size, "arguments" if input_size is not 1
-                                 else "argument", ":" if input_usr is not 0
-                                 else "."))
+                                 else "argument", "." if input_usr is 0
+                                 else ":"))
 
     for index_args, args in enumerate(input_usr):
         print("{:d}: {:s}".format(index_args + 1, args))
