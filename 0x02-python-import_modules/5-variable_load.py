@@ -2,6 +2,8 @@
 
 if __name__ == "__name__":
 
-    from variable_load_5 import a
+    import variable_load_5
 
-    print("{}".format(a))
+    var = variable_load_5.a
+
+    print(var)
