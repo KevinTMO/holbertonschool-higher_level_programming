@@ -5,7 +5,9 @@
 def print_list_integer(my_list=[]):
     """
     Will print a list of integers
-    my_list: is the list of integers to prin
+    my_list: is the list of integers to print
     """
-#    newList = my_list <- testing with another variable
-    print("{}".format(my_list))
+    newList = my_list
+
+    for lst in newList:
+        print("{}".format(lst))
