@@ -8,4 +8,4 @@ def print_list_integer(my_list=[]):
     my_list: is the list of integers to print
     """
     for lst in my_list:
-        print("{}".format(lst))
+        print("{:d}".format(lst))
