@@ -3,10 +3,10 @@
 
 
 def print_reversed_list_integer(my_list=[]):
-
-    if len(my_list) <= 0:
-        return None
-
-    else:
+    """
+    Will print a list of integers in reverse
+    my_list: is the list of integers
+    """
+    if my_list:
         for lst in reversed(my_list):
             print("{:d}".format(lst))
