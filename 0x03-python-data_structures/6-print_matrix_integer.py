@@ -8,4 +8,4 @@ def print_matrix_integer(matrix=[[]]):
     matrix: is the matrix to print
     """
     for newMatrix in matrix:
-        print(" ".join(map(str, newMatrix)))
+        print(" ".join("{:d}".format(idx) for idx in newMatrix))
