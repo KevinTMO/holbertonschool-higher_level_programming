@@ -8,9 +8,5 @@ def no_c(my_string):
     my_string: the string to remove  characters from
     """
     newString = my_string
-    chrRem = "Cc"
 
-    for characters in chrRem:
-        newString = newString.replace(characters, "")
-
-    return newString
+    return (newString.translate({ord('C'): None, ord('c'): None}))
