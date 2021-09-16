@@ -6,9 +6,7 @@ def uniq_add(my_list=[]):
     """
     my_list: a list of integers
     """
-    newList = my_list.copy()
-
-    if len(newList) <= 0 or newList == None:
-        return None
+    if my_list:
+        newList = my_list.copy()
 
     return sum(set(newList))
