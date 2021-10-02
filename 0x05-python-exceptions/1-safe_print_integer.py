@@ -7,7 +7,7 @@ def safe_print_integer(value):
     Using "{:d}".format()
     """
     try:
-        if type(value) is int:
+        if isinstance(value, int):
             print("{:d}".format(value))
             return True
     except TypeError:
