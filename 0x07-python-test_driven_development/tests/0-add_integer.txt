@@ -1,0 +1,72 @@
+=======================================
+DOCTEST TEXT FILE -> INCLUDES ALL TESTS
+=======================================
+
+# test with python3 -m doctest -v ./tests/0-add_integer.txt
+
+=== First import method to test ===
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+SUCCESS CASES:
+==============
+
+NUMBERS TEST CASES:
+===================
+
+TESTING ADD CASE:
+=================
+
+>>> add_integer(2, 3)
+5
+
+>>> add_integer(-3, -3)
+-6
+
+>>> add_integer(-10, 5)
+-5
+
+TESTING B POSITION VALUE DEFAULT:
+=================================
+
+>>> add_integer(10, )
+108
+
+>>> add_integer(-10, )
+88
+
+
+TESTING FLOAT CAST TO INT:
+==========================
+
+>>> add_integer(5.3, 5.3)
+10
+
+>>> add_integer(-10.3, -10.3)
+-20
+
+FAIL CASES:
+===========
+
+TEST PASSING INCORRECT VALUE TYPE:
+==================================
+
+>>> add_integer('a', 3)
+Traceback (most recent call last):
+...
+TypeError: a must be integer
+
+>>> add_integer(10e, 3)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+
+>>> add_integer( , 3)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+
+>>> add_integer(1231231e3123123, 1241241024024)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer

@@ -1,0 +1,79 @@
+=======================================
+DOCTEST TEXT FILE -> INCLUDES ALL TESTS
+=======================================
+
+# LINE COMMAND TO START TESTING -> python3 -m doctest -v ./tests/5-text_indentation.txt
+# Option -v is to add more details after testing
+# Option -m is for the module-name (it expects the name of a module after)
+
+=== First import method to test ===
+
+>>> text = __import__('5-text_indentation').text_indentation
+
+>>> strText = ("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+...    	      Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?
+...	      Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud:""") \
+
+SUCCESS CASES:
+==============
+
+TESTING NORMAL USE OF FUNCTION:
+-------------------------------
+
+>>> text(strText)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+<BLANKLINE>
+           Quonam modo?
+<BLANKLINE>
+<BLANKLINE>
+ Utrum igitur tibi litteram videor an totas paginas commovere?
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+	  Non autem hoc:
+<BLANKLINE>
+<BLANKLINE>
+ igitur ne illud quidem.
+<BLANKLINE>
+<BLANKLINE>
+ Fortasse id optimum, sed ubi illud:
+<BLANKLINE>
+<BLANKLINE>
+
+TESTING FOR SPACE AT BEGINNING OR END:
+--------------------------------------
+
+>>> strNoSpace = ("""  Two spaces and then three plus a dot.   """)
+
+>>> text(strNoSpace)
+Two spaces and then three plus a dot.
+<BLANKLINE>
+<BLANKLINE>
+
+FAIL CASES:
+===========
+
+TESTING MORE THAN REQ ARGS:
+---------------------------
+
+>>> text(strText, strNoSpace)
+Traceback (most recent call last):
+...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+TESTING PASSING LESS THAN REQ ARGS:
+-----------------------------------
+
+>>> text()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+TESTING PASSING OTHER THAN STR TYPE:
+------------------------------------
+
+>>> text(5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string

@@ -1,0 +1,60 @@
+=======================================
+DOCTEST TEXT FILE -> INCLUDES ALL TESTS
+=======================================
+
+# LINE COMMAND TO START TESTING -> python3 -m doctest -v ./tests/4-print_square.txt
+# Option -v is to add more details after testing
+# Option -m is for the module-name (it expects the name of a module after)
+
+=== First import method to test ===
+
+>>> square = __import__('4-print_square').print_square
+
+>>> size = 5
+
+SUCCESS CASES:
+==============
+
+>>> square(size)
+#####
+#####
+#####
+#####
+#####
+
+FAIL CASES:
+===========
+
+TESTING PASSING MORE ARGS THAN REQ:
+-----------------------------------
+
+>>> square(size, 1)
+Traceback (most recent call last):
+...
+TypeError: print_square() takes 1 positional argument but 2 were given
+
+TESTING PASSING LESS ARGS THAN REQ:
+-----------------------------------
+
+>>> square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+TESTING PASSING OTHER DATA TYPE:
+--------------------------------
+
+>>> square('a')
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> square(None)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> square([4])
+Traceback (most recent call last):
+...
+TypeError: size must be an integer

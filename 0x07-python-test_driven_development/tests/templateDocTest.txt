@@ -1,0 +1,15 @@
+=======================================
+DOCTEST TEXT FILE -> INCLUDES ALL TESTS
+=======================================
+
+# LINE COMMAND TO START TESTING -> python3 -m doctest -v ./tests/example.txt
+# Option -v is to add more details after testing
+# Option -m is for the module-name (it expects the name of a module after)
+
+=== First import method to test ===
+
+>>> FUNCTION_NAME = __import__('FUNCTION_FILE_NAME').FUNCTION_NAME
+
+SUCCESS CASES:
+
+FAIL CASES:

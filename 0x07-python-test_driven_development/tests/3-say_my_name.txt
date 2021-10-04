@@ -1,0 +1,85 @@
+=======================================
+DOCTEST TEXT FILE -> INCLUDES ALL TESTS
+=======================================
+
+# LINE COMMAND TO START TESTING -> python3 -m doctest -v ./tests/3-say_my_name.txt
+# Option -v is to add more details after testing
+# Option -m is for the module-name (it expects the name of a module after)
+
+=== First import method to test ===
+
+>>> sayMyName = __import__('3-say_my_name').say_my_name
+
+>>> Name = "TheBoss"
+>>> Last = "Aka Kevin"
+
+SUCCESS CASES:
+==============
+
+TESTING NORMAL USE OF FUNCTION:
+-------------------------------
+
+>>> sayMyName(Name, Last)
+My name is TheBoss Aka Kevin
+
+TESTING PASSING ONLY ONE ARGUMENT:
+----------------------------------
+
+>>> sayMyName(Name)
+My name is TheBoss 
+
+FAIL CASES:
+===========
+
+TESTING PASSING MORE THAN REQ ARGUMENTS:
+----------------------------------------
+
+>>> sayMyName(Name, Last, "Noob")
+Traceback (most recent call last):
+...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+TESTING PASSING LESS THAN REQ ARGUMENTS:
+----------------------------------------
+
+>>> sayMyName(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+
+>>> sayMyName()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+TESTING PASSING DIGITS AS ARGUMENTS:
+------------------------------------
+
+>>> sayMyName(3, 4)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> sayMyName(Name, 4)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+TESTING PASSING STRINGS INSIDE DATA STRUCTURES:
+-----------------------------------------------
+
+>>> sayMyName(Name, ["Aka Kevin"])
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> sayMyName(["TheBoss"], Last)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> sayMyName(Name, ["Oompa"])
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
