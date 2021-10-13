@@ -11,6 +11,7 @@ Method:
 
 BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """
     Inherit from BaseGeometry methods
@@ -22,7 +23,7 @@ class Rectangle(BaseGeometry):
         width: private
         height: private
         """
-        super().integer_validator("width", width) # sending width name and val
-        self.__width = width # giving result
-        super().integer_validator("height", height) #sending height name and val
-        self.__height = height # giving result
+        super().integer_validator("width", width)  # send width name and val
+        self.__width = width  # giving result
+        super().integer_validator("height", height)  # send height name and val
+        self.__height = height  # giving result
