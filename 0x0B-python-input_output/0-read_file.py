@@ -12,5 +12,5 @@ def read_file(filename=""):
     """
     Read a text file and prints to stdout
     """
-    with open(filename, 'r', encoding='UTF-8') as File:
+    with open(filename, encoding='UTF-8') as File:
         print(File.read(), end="")
