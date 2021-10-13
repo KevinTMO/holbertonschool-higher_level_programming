@@ -18,7 +18,7 @@ Pseudo:
 - In try we will just check if there's some content and the file already exist
 - In except we will give [] before creating a file to a variable.
 - Then, we will call save so we can serialize some object into json file
-- When calling save method, we need to concatenate the fileContent and the first
+- When calling save method, we need to concatenate the fileContent and the frst
 ... argument after the filename
 """
 
