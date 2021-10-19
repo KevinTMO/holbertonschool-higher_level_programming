@@ -29,6 +29,8 @@ class Base:
 
     #  json methods
 
+
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         returns the JSON string representation of list_dictionaries
