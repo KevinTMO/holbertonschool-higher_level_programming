@@ -8,7 +8,9 @@ Class: Base
 
 
 class Base:
-
+    """
+    Creating a class attrs there's no id
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
