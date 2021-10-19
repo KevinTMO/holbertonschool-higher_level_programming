@@ -186,7 +186,6 @@ class Rectangle(Base):
             if "y" in kwargs:
                 self.__y = kwargs["y"]
 
-
     #  return a dictionary representation of Rectangle
 
     def to_dictionary(self):
