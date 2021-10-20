@@ -8,6 +8,7 @@ Class: Base
 
 
 import json
+import os
 
 
 class Base:
@@ -85,13 +86,14 @@ class Base:
         """
         filename = cls.__name__ + ".json"
 
-        lst = []
+        if os.stat(filename).st_size == 0:
+            return []
 
-        if filename:
+        else:
+            lst = []
             with open(filename, "r") as File:
                 lstInsta = cls.from_json_string(File.read())
             #  print(lstInsta) for debugging
             for index, value in enumerate(lstInsta):
                 lst.append(cls.create(**lstInsta[index]))
-
-        return lst
+            return lst
