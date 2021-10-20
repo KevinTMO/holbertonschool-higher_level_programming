@@ -86,14 +86,15 @@ class Base:
         """
         filename = cls.__name__ + ".json"
 
-        if os.stat(filename).st_size == 0:
-            return []
-
-        else:
+        try:
             lst = []
             with open(filename, "r") as File:
                 lstInsta = cls.from_json_string(File.read())
             #  print(lstInsta) for debugging
             for index, value in enumerate(lstInsta):
                 lst.append(cls.create(**lstInsta[index]))
-            return lst
+
+        except IOError:
+            return []
+
+        return lst
