@@ -86,6 +86,8 @@ class Base:
         """
         filename = cls.__name__ + ".json"
 
+        lst = []
+
         try:
             lst = []
             with open(filename, "r") as File:
