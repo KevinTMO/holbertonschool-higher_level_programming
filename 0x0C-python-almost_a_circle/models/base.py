@@ -96,6 +96,6 @@ class Base:
                 lst.append(self.create(**lstInsta[index]))
 
         except IOError:
-            return []
+            return lst
 
         return lst
