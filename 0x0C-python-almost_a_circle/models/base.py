@@ -77,3 +77,21 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(self):
+        """
+        returns a list of instances
+        """
+        filename = self.__name__ + ".json"
+
+        lst = []
+
+        with open(filename, "r") as File:
+            lstInsta = self.from_json_string(File.read())
+        #  print(lstInsta) for debugging
+
+        for index, value in enumerate(lstInsta):
+            lst.append(self.create(**lstInsta[index]))
+
+        return lst
