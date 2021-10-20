@@ -86,8 +86,9 @@ class Base:
         """
         filename = self.__name__ + ".json"
 
+        lst = []
+
         try:
-            lst = []
             with open(filename, "r") as File:
                 lstInsta = self.from_json_string(File.read())
             #  print(lstInsta) for debugging
