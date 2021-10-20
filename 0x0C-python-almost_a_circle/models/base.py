@@ -87,11 +87,11 @@ class Base:
 
         lst = []
 
-        with open(filename, "r") as File:
-            lstInsta = cls.from_json_string(File.read())
-        #  print(lstInsta) for debugging
-
-        for index, value in enumerate(lstInsta):
-            lst.append(cls.create(**lstInsta[index]))
+        if filename:
+            with open(filename, "r") as File:
+                lstInsta = cls.from_json_string(File.read())
+            #  print(lstInsta) for debugging
+            for index, value in enumerate(lstInsta):
+                lst.append(cls.create(**lstInsta[index]))
 
         return lst
