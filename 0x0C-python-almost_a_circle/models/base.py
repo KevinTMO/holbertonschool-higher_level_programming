@@ -79,19 +79,19 @@ class Base:
         return dummy
 
     @classmethod
-    def load_from_file(self):
+    def load_from_file(cls):
         """
         returns a list of instances
         """
-        filename = self.__name__ + ".json"
+        filename = cls.__name__ + ".json"
 
         lst = []
 
         with open(filename, "r") as File:
-            lstInsta = self.from_json_string(File.read())
+            lstInsta = cls.from_json_string(File.read())
         #  print(lstInsta) for debugging
 
         for index, value in enumerate(lstInsta):
-            lst.append(self.create(**lstInsta[index]))
+            lst.append(cls.create(**lstInsta[index]))
 
         return lst
