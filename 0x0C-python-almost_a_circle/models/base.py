@@ -95,7 +95,7 @@ class Base:
             for index, value in enumerate(lstInsta):
                 lst.append(self.create(**lstInsta[index]))
 
-        except IOError:
+        except:
             pass
 
         return lst
