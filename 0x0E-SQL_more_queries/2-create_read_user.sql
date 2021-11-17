@@ -1,0 +1,9 @@
+-- Creates the database hbtn_0d_2 if doesnt exist ignore
+-- Create the user user_0d_2 with password user_0d_2_pwd if doesnt exist ignore
+-- Grants database hbtn_0d_2 priviliges to user_0d_2
+
+CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
+CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';
+GRANT USAGE ON *.* 'user_0d_2'@'localhost';
+GRANT SELECT PRIVILEGES ON 'hbtn_0d_2'.* TO 'user_0d_2'@'localhost';
+FLUSH PRIVILEGES;
