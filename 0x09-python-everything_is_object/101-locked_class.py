@@ -12,4 +12,8 @@ class LockedClass:
     Defining a list with all attrs you want to use
     Anything not in the list cannot be used as attrs
     """
-    __slot__ = "first_name"
+
+    __slot__ = ["first_name"]
+
+    def __init__(self, name=""):
+        self.first_name = name
