@@ -7,7 +7,7 @@ Except when calling "first_name"
 """
 
 
-class LockedClass():
+class LockedClass:
     """
     Defining a list with all attrs you want to use
     Anything not in the list cannot be used as attrs
