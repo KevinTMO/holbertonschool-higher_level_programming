@@ -68,5 +68,5 @@ class Square:
         Print a square using # by size until range(size)
         """
         if self.size == 0:
-            print()
+            pass
         print('\n'.join("#" * self.size for sq in range(self.size)))
