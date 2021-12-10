@@ -36,7 +36,7 @@ class Square:
         Instance attrs:
         - size (private)
         """
-        self.__size = size
+        self.size = size
         self.position = position
 
     def area(self):
@@ -80,7 +80,8 @@ class Square:
         It will validate if it is an int or greater/eq than 0
         """
         if type(value) is not tuple or len(value) != 2 or\
-           type(value[:]) is not int or value[:] < 0:
+           type(value[0]) is not int or type(value[1]) is not int or\
+           value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
@@ -89,10 +90,10 @@ class Square:
         """
         Print a square using # by size until range(size)
         """
-        if self.size == 0:
+        if self.__size == 0:
             pass
 
         else:
-            print("\n" * self.position[1], end="")
-            print('\n'.join(" " * self.position[0] +
-                            "#" * self.size for sq in range(self.size)))
+            print("\n" * self.__position[1], end="")
+            print('\n'.join(" " * self.__position[0] +
+                            "#" * self.__size for sq in range(self.__size)))
