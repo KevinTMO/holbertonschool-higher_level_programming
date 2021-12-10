@@ -8,5 +8,6 @@ Class:
 - Rectangle:
 """
 
+
 class Rectangle:
     pass
