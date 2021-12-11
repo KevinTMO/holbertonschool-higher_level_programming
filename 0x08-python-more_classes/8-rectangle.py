@@ -28,6 +28,7 @@ Methods:
 Decorators:
 - @property
 - @setter
+- @staticmethod
 """
 
 
