@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 4-rectangle.py
+Module 5-rectangle.py
 
 Create a method that prints a msg when an instace is deleted
 
