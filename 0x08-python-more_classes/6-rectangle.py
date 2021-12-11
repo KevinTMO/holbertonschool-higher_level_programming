@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 4-rectangle.py
+Module 6-rectangle.py
 
 Create a public class attrs to count the nmbrs of instances instantiate
 and decrease if they are deleted

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 4-rectangle.py
+Module 7-rectangle.py
 
 Create another public cls attr and assign "#" to it
 
