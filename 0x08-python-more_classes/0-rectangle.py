@@ -10,4 +10,7 @@ Class:
 
 
 class Rectangle:
+    """
+    Creating an empty class
+    """
     pass
