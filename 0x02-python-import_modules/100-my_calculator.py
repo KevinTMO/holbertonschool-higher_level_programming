@@ -9,24 +9,24 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-        op = ['+', '-', '*', '/']
+    op = ['+', '-', '*', '/']
 
-        if argv[2] not in op:
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
+    if argv[2] not in op:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
 
-            a = int(argv[1])
-            b = int(argv[3])
-            opr = str(argv[2])
+    a = int(argv[1])
+    b = int(argv[3])
+    opr = str(argv[2])
 
-            if opr == '+':
-                print("{} {} {} = {}".format(a, opr, b, add(a, b)))
+    if opr == '+':
+        print("{} {} {} = {}".format(a, opr, b, add(a, b)))
 
-            if opr == '-':
-                print("{} {} {} = {}".format(a, opr, b, sub(a, b)))
+    if opr == '-':
+        print("{} {} {} = {}".format(a, opr, b, sub(a, b)))
 
-            if opr == '*':
-                print("{} {} {} = {}".format(a, opr, b, mul(a, b)))
+    if opr == '*':
+        print("{} {} {} = {}".format(a, opr, b, mul(a, b)))
 
-            if opr == '/':
-                print("{} {} {} = {}".format(a, opr, b, div(a, b)))
+    if opr == '/':
+        print("{} {} {} = {}".format(a, opr, b, div(a, b)))
