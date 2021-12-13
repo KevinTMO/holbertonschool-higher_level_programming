@@ -4,6 +4,6 @@ const firstArgv = argv[2];
 
 if (argv.length < 3) {
   console.log('No argument');
-} else if (argv.length === 3) {
+} else {
   console.log(firstArgv);
 }
