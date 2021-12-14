@@ -9,13 +9,13 @@ module.exports = class Rectangle {
   }
 
   print () {
-  let str = '';
+    let str = '';
     for (let row = 1; row <= this.height; row++) {
       for (let col = 1; col <= this.width; col++) {
         str += 'X';
       }
       if (row < this.height) {
-	str += '\n';
+        str += '\n';
       }
     }
     console.log(str);
@@ -23,7 +23,7 @@ module.exports = class Rectangle {
   }
 
   rotate () {
-    let tmp = this.height;
+    const tmp = this.height;
     this.height = this.width;
     this.width = tmp;
   }
@@ -32,7 +32,6 @@ module.exports = class Rectangle {
     this.width = this.width * 2;
     this.height = this.height * 2;
   }
-
 };
 
 /*
