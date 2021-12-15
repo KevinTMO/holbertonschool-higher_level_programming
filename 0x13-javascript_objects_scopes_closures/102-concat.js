@@ -10,5 +10,4 @@ const fileC = argv[4];
 const textA = fs.readFileSync(fileA, 'utf8');
 const textB = fs.readFileSync(fileB, 'utf8');
 
-console.log(fileC);
 fs.writeFileSync(fileC, textA + textB);
