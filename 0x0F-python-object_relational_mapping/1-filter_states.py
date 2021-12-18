@@ -22,7 +22,7 @@ if __name__ == "__main__":
     rows = cur.fetchall()
 
     for row in rows:
-        if row[1][0]:
+        if row[1][0] == "N":
             print(row)
 
     cur.close()
