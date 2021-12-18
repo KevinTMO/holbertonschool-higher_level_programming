@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Display only those entires from the state given
+"""
 
 import MySQLdb
 from sys import argv
