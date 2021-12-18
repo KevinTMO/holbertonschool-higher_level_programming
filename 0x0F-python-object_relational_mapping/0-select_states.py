@@ -3,15 +3,17 @@
 import MySQLdb
 from sys import argv
 
-cnndb = MySQLdb.connect(host='localhost', port=3306, user='root', passwd='', db='hbtn_0e_0_usa', charset='utf8')
+if __name__ == '__main__':
 
-cur = cnndb.cursor();
-cur.execute('SELECT * FROM states ORDER BY id ASC')
+    cnndb = MySQLdb.connect(host='localhost', port=3306, user=argv[1], passwd=argv[2], db=argv[3], charset='utf8')
 
-rows = cur.fetchall()
+    cur = cnndb.cursor();
+    cur.execute('SELECT * FROM states ORDER BY id ASC')
 
-for row in rows:
-    print(row)
+    rows = cur.fetchall()
 
-cur.close()
-cnndb.close()
+    for row in rows:
+        print(row)
+
+    cur.close()
+    cnndb.close()
