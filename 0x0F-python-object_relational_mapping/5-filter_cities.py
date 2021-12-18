@@ -21,7 +21,7 @@ if __name__ == "__main__":
     cur = cnndb.cursor()
     cur.execute('SELECT cities.name FROM cities, states\
     WHERE states.name = %(state_name)s\
-    AND state_id = states.id',{'state_name': state_name})
+    AND state_id = states.id', {'state_name': state_name})
 
     rows = cur.fetchall()
     cities = ()
