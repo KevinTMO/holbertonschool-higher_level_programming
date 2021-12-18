@@ -1,19 +1,31 @@
 #!/usr/bin/python3
+"""
+Write a script that filter states but safe from sql injection
+"""
+
 
 import MySQLdb
 from sys import argv
 
-state_name = argv[4]
+if __name__ == '__main__':
 
-cnndb = MySQLdb.connect(host='localhost', port=3306, user=argv[1], passwd=argv[2], db=argv[3], charset='utf8')
+    state_name = argv[4]
 
-cur = cnndb.cursor()
-cur.execute('SELECT * FROM states WHERE name = %(state_name)s ORDER BY id ASC', {'state_name': state_name})
+    cnndb = MySQLdb.connect(host='localhost',
+                            port=3306,
+                            user=argv[1],
+                            passwd=argv[2],
+                            db=argv[3],
+                            charset='utf8')
 
-rows = cur.fetchall()
+    cur = cnndb.cursor()
+    cur.execute('SELECT * FROM states WHERE name = %(state_name)s\
+    ORDER BY id ASC', {'state_name': state_name})
 
-for row in rows:
-    print(row)
+    rows = cur.fetchall()
 
-cur.close()
-cnndb.close()
+    for row in rows:
+        print(row)
+
+    cur.close()
+    cnndb.close()
