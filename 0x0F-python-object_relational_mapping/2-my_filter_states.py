@@ -16,7 +16,7 @@ if __name__ == "__main__":
                             charset='utf8')
 
     cur = cnndb.cursor()
-    cur.execute('SELECT * FROM states WHERE name LIKE "{}%" ORDER BY id ASC'.
+    cur.execute('SELECT * FROM states WHERE name LIKE "{:s}%" ORDER BY id ASC'.
                 format(argv[4]))
 
     rows = cur.fetchall()
