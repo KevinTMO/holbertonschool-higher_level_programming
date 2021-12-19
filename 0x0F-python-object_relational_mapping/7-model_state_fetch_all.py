@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """
+Creating the connection between the script and our database to
+send instruction and receive the information we require
 """
 
 
