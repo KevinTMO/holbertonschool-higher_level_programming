@@ -24,7 +24,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=Engine)
     session = Session()
     output = session.query(State.name, City.id, City.name).filter(
-        State.id == City.id).order_by(City.id)
+        State.id == City.state_id).order_by(City.id)
 
     for queries in output:
         print("{}: ({}) {}".format(queries[0], queries[1], queries[2]))
