@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-
+Fetching only one row from table states
+If there's nothing then print 'Nothing' followed by a line
 """
 
 
