@@ -13,15 +13,15 @@ of the response (decoded in utf-8)
 
 
 from urllib.request import Request, urlopen
-from urllib.parse import urlencode as parse
+from urllib.parse import urlencode
 from sys import argv
 
 
 if __name__ == "__main__":
 
-    dict = {'email': argv[2]}
-    data = parse(dict).encode('utf-8')
+    dic = {'email': argv[2]}
+    data = urlencode(dic).encode('utf-8')
     response = Request(argv[1], data)
 
     with urlopen(response) as File:
-        print(File.read.decode('utf-8'))
+        print(File.read().decode('utf-8'))
