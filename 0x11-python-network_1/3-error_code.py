@@ -21,7 +21,7 @@ from sys import argv
 if __name__ == "__main__":
 
     urlPort = argv[1]
-    response = Request(url)
+    response = Request(urlPort)
 
     try:
         with urlopen(response) as File:
