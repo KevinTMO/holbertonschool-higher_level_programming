@@ -16,5 +16,5 @@ if __name__ == '__main__':
 
     with get('https://intranet.hbtn.io/status') as File:
         print('Body response:')
-        print('    - type: {}'.format(type(File.text)))
-        print('    - content: {}'.format(File.text))
+        print('\t- type: {}'.format(type(File.text)))
+        print('\t- content: {}'.format(File.text))
