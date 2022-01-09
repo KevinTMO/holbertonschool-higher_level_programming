@@ -1,3 +1,3 @@
 #!/bin/bash
 # Connect to the url, then get the Content-Length in the response header
-curl -s "$1" --include | grep -i Content-Length | awk '{print $2}'
+curl -si 0.0.0.0:5000 | grep -i Content-Length | cut -d " " -f 2
