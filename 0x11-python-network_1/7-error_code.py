@@ -25,4 +25,4 @@ if __name__ == "__main__":
         print(response.text)
 
     else:
-        print("Error code: ".format(code))
+        print("Error code: {}".format(code))
