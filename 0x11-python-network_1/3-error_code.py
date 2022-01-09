@@ -28,4 +28,4 @@ if __name__ == "__main__":
             print(File.read().decode('utf-8'))
 
     except HTTPError as err:
-        print('Error code: {}'.format(err))
+        print('Error code: {}'.format(err.code))
