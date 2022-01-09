@@ -12,9 +12,9 @@ Write a Python script that fetches https://intranet.hbtn.io/status
 
 if __name__ == '__main__':
 
-    from urllib.request import urlopen
+    import urllib.request
 
-    with urlopen('https://intranet.hbtn.io/status') as File:
+    with urllib.request.urlopen('https://intranet.hbtn.io/status') as File:
         html = File.read()
         print('Body response:')
         print('    - type: {}'.format(type(html)))
