@@ -6,4 +6,4 @@ grep option -i looks matches even if they got upper or lowercase in them.
 awk will print the second column after grep match
 """
 
-curl -si '$1' | grep -i Content_Length |  awk '{print $2}'
+curl -si '$1' | grep -i Content-Length |  awk '{print $2}'
