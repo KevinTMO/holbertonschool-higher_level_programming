@@ -10,10 +10,9 @@ Write a Python script that fetches https://intranet.hbtn.io/status
 """
 
 
-from urllib.request import urlopen
-
-
 if __name__ == '__main__':
+
+    from urllib.request import urlopen
 
     with urlopen('https://intranet.hbtn.io/status') as File:
         html = File.read()
