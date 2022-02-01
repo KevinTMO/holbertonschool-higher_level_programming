@@ -5,16 +5,15 @@ If there's an error print the error object
 then print the data
 */
 
-const fs = require('fs')
+const fs = require('fs');
 
-const file = process.argv[2]
-const data = process.argv[3]
+const file = process.argv[2];
+const data = process.argv[3];
 
-fs.writeFile(file, data, 'utf-8', function(err) {
-    if (err) {
-	console.error(err);
-	return;
-    }
+fs.writeFile(file, data, 'utf-8', function (err) {
+  if (err) {
+    console.error(err);
+  }
 });
 
 /*
