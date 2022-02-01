@@ -14,7 +14,7 @@ rq(url, function (err, req) {
     return;
   }
   const resSt = req.statusCode;
-  console.log('Code: ' + resSt);
+  console.log('code: ' + resSt);
 });
 
 /*
