@@ -5,17 +5,16 @@ If there's an error print the error object
 then print the data
 */
 
-const fs = require('fs')
+const fs = require('fs');
 
-const arg = process.argv[2]
+const arg = process.argv[2];
 
-
-fs.readFile(arg, 'utf-8', function(err, data) {
-    if (err) {
-	console.error(err);
-	return;
-    }
-    console.log(data);
+fs.readFile(arg, 'utf-8', function (err, data) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
 });
 
 /*
@@ -25,7 +24,6 @@ fs.readFile(arg, 'utf-8', function(err, data) {
 const fs = require('fs')
 
 const arg = process.argv[2]
-
 
 fs.readFile(arg, 'utf-8', (err, data) => {
     if (err) {
